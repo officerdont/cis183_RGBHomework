@@ -5,110 +5,165 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FBFAFA"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="24dp"
         android:text="RGB Homework"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/sb_v_red"
         android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="105dp"
-        app:layout_constraintBottom_toBottomOf="@+id/sb_v_blue"
+        android:layout_height="46dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="64dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_v_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_v_red"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/tv_v_green2"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <SeekBar
         android:id="@+id/sb_v_green"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_v_blue"
-        app:layout_constraintEnd_toEndOf="@+id/sb_v_blue"
-        app:layout_constraintStart_toStartOf="@+id/sb_v_red"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_green" />
+        android:layout_width="339dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_v_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_green2"
+        app:layout_constraintTop_toTopOf="@+id/tv_v_green" />
 
     <SeekBar
         android:id="@+id/sb_v_blue"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_v_addcolor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_v_blue"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_blue" />
+        android:layout_height="39dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="43dp"
+        android:max="255"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_v_addcolor"
+        app:layout_constraintEnd_toEndOf="@+id/sb_v_green"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_red"
+        app:layout_constraintTop_toTopOf="@+id/sb_v_green" />
 
     <TextView
         android:id="@+id/tv_v_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="78dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/sb_v_red"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_red" />
+
+    <TextView
+        android:id="@+id/tv_v_red3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="red"
-        app:layout_constraintBottom_toTopOf="@+id/tv_v_green"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_v_red"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_v_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="32dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/tv_v_blue"
+        app:layout_constraintEnd_toStartOf="@+id/sb_v_green"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_green2"
+        app:layout_constraintTop_toBottomOf="@+id/sb_v_red" />
+
+    <TextView
+        android:id="@+id/tv_v_green2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="8dp"
         android:text="green"
-        app:layout_constraintBottom_toTopOf="@+id/sb_v_green"
+        app:layout_constraintEnd_toStartOf="@+id/sb_v_red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_red" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_v_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="6dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/sb_v_blue"
+        app:layout_constraintTop_toTopOf="@+id/tv_v_blue2" />
+
+    <TextView
+        android:id="@+id/tv_v_blue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="32dp"
         android:text="blue"
-        app:layout_constraintBottom_toTopOf="@+id/sb_v_blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sb_v_green" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_v_green2" />
 
     <ListView
         android:id="@+id/lv_v_listofcolors"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="394dp"
+        android:layout_height="404dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_v_addcolor" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_v_addcolor"
+        app:layout_constraintVertical_bias="0.166" />
 
     <Button
         android:id="@+id/btn_v_addcolor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="56dp"
         android:text="ADD"
-        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sb_v_blue" />
+        app:layout_constraintTop_toBottomOf="@+id/sb_v_green" />
+
+    <TextView
+        android:id="@+id/tv_v_hexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="25dp"
+        android:text="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/lv_v_listofcolors"
+        app:layout_constraintEnd_toStartOf="@+id/btn_v_addcolor"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_hexatext"
+        app:layout_constraintTop_toTopOf="@+id/sb_v_blue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_v_hexatext"
+        android:layout_width="86dp"
+        android:layout_height="37dp"
+        android:text="Hexadecimal: "
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_v_hexa"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

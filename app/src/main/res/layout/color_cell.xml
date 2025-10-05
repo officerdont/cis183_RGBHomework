@@ -2,46 +2,104 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/tv_v_cell_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+    <FrameLayout
+        android:id="@+id/fl_v_cell_container"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="#BA9797"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_v_cell_green"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="18dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_v_cell_red"
-        app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_v_cell_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/tv_v_cell_green"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/tv_blue"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
 
     <TextView
         android:id="@+id/tv_v_cell_hexa"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_v_cell_red" />
+        app:layout_constraintBottom_toBottomOf="@+id/fl_v_cell_container"
+        app:layout_constraintStart_toEndOf="@+id/tv_hexa" />
+
+    <TextView
+        android:id="@+id/tv_v_cell_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_red"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
+
+    <TextView
+        android:id="@+id/tv_v_cell_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_green"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
+
+    <TextView
+        android:id="@+id/tv_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        android:text="red"
+        app:layout_constraintStart_toStartOf="@+id/fl_v_cell_container"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
+
+    <TextView
+        android:id="@+id/tv_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="green"
+        app:layout_constraintStart_toEndOf="@+id/tv_v_cell_red"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
+
+    <TextView
+        android:id="@+id/tv_hexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:text="hexadecimal"
+        app:layout_constraintStart_toStartOf="@+id/fl_v_cell_container"
+        app:layout_constraintTop_toTopOf="@+id/tv_v_cell_hexa" />
+
+    <TextView
+        android:id="@+id/tv_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="105dp"
+        android:text="blue"
+        app:layout_constraintEnd_toEndOf="@+id/fl_v_cell_container"
+        app:layout_constraintStart_toStartOf="@+id/tv_v_cell_green"
+        app:layout_constraintTop_toTopOf="@+id/fl_v_cell_container" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
