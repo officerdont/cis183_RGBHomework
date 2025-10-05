@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements ColorDataAdapter.
         int g = Integer.parseInt(tv_j_green.getText().toString());
         int b =Integer.parseInt(tv_j_blue.getText().toString());
         main.setBackgroundColor(rgb(r,g,b));
-        String h = String.format("#%02x%02x%02x",r,g,b);
+        String h = String.format("#%02X%02X%02X",r,g,b);
         tv_j_hexa.setText(h);
 
         if (androidx.core.graphics.ColorUtils.calculateLuminance(rgb(r,g,b)) < 0.5)
@@ -220,12 +220,19 @@ public class MainActivity extends AppCompatActivity implements ColorDataAdapter.
 
         main.setBackgroundColor(rgb(r,g,b));
 
-        String h = String.format("#%02x%02x%02x",r,g,b);
+        String h = String.format("#%02X%02X%02X",r,g,b);
 
         ColorData newcolor = new ColorData(r,g,b,h);
         ListOfColors.add(newcolor);
 
         filllistview();
+        sb_j_red.setProgress(255);
+        sb_j_green.setProgress(255);
+        sb_j_blue.setProgress(255);
+
+        // 4. Call BackroundChange() which will now use the new '0' values
+        //    to update all text views and set the background to black.
+        BackroundChange();
     }
 
 
